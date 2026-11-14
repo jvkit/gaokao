@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2027 高考报名开启：全流程提醒与避坑清单</title>
+<meta name="description" content="2027 年高考报名陆续启动：报名时间轴、报名条件、五步流程、材料清单与避坑提醒，一页看懂。">
+<meta property="og:title" content="2027 高考报名开启：全流程提醒与避坑清单">
+<meta property="og:description" content="报名时间轴 · 条件 · 五步流程 · 材料清单 · 避坑提醒">
+<meta property="og:type" content="article">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230D0708'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='15' font-weight='700' fill='%23FF6B5E' font-family='serif'%3E考%3C/text%3E%3C/svg%3E">
+<style>
+  :root{
+    --bg:#0D0708;
+    --card:#160C0D;
+    --card-2:#1C1011;
+    --line:#2B1516;
+    --line-2:#3E1D1E;
+    --red:#E5484D;
+    --red-bright:#FF6B5E;
+    --red-deep:#8C2320;
+    --gold:#F0B35E;
+    --text:#EFE4E0;
+    --text-strong:#FBF3F0;
+    --muted:#A08E8A;
+    --mono:ui-monospace,"SF Mono","Cascadia Code","JetBrains Mono",Menlo,Consolas,monospace;
+    --sans:"PingFang SC","Hiragino Sans GB","Source Han Sans SC","Noto Sans SC","Microsoft YaHei",system-ui,sans-serif;
+    --max:760px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:17px;line-height:1.95;-webkit-font-smoothing:antialiased}
+  ::selection{background:var(--red);color:#140506}
+  ::-webkit-scrollbar{width:10px}
+  ::-webkit-scrollbar-track{background:var(--bg)}
+  ::-webkit-scrollbar-thumb{background:var(--line-2);border-radius:5px}
+
+  #progress{position:fixed;top:0;left:0;height:3px;width:100%;background:linear-gradient(90deg,var(--red-deep),var(--red),var(--gold));transform-origin:0 50%;transform:scaleX(0);z-index:100}
+
+  .hero{
+    position:relative;padding:96px 24px 110px;text-align:center;overflow:hidden;
+    background:
+      radial-gradient(1000px 500px at 50% -60px, rgba(229,72,77,.16), transparent 65%),
+      radial-gradient(600px 400px at 15% 110%, rgba(240,179,94,.06), transparent 60%),
+      linear-gradient(180deg,#120A0B 0%, var(--bg) 100%);
+  }
+  .hero::before{
+    content:"";position:absolute;inset:0;
+    background:
+      repeating-linear-gradient(0deg, rgba(229,72,77,.05) 0 1px, transparent 1px 56px),
+      repeating-linear-gradient(90deg, rgba(229,72,77,.05) 0 1px, transparent 1px 56px);
+    -webkit-mask-image:radial-gradient(700px 460px at 50% 30%, #000 30%, transparent 75%);
+    mask-image:radial-gradient(700px 460px at 50% 30%, #000 30%, transparent 75%);
+    animation:gridDrift 26s linear infinite;
+  }
+  @keyframes gridDrift{from{background-position:0 0,0 0}to{background-position:0 56px,56px 0}}
+  .hero::after{
+    content:"";position:absolute;left:50%;bottom:0;transform:translateX(-50%);
+    width:min(680px,90%);height:1px;
+    background:linear-gradient(90deg,transparent,var(--red-deep) 30%,var(--red) 50%,var(--red-deep) 70%,transparent);
+    opacity:.7;
+  }
+  .hero-inner{position:relative;z-index:2;max-width:860px;margin:0 auto}
+  .kicker{
+    display:inline-flex;align-items:center;gap:10px;
+    font-family:var(--mono);font-size:12px;letter-spacing:.28em;color:var(--red-bright);
+    border:1px solid var(--line-2);border-radius:999px;padding:8px 18px;background:rgba(229,72,77,.06);
+  }
+  .kicker .dot{width:6px;height:6px;border-radius:50%;background:var(--red-bright);box-shadow:0 0 10px var(--red);animation:pulse 2.2s ease-in-out infinite}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
+  .hero h1{margin:34px 0 20px;font-size:clamp(30px,5.4vw,54px);line-height:1.3;font-weight:800;color:var(--text-strong)}
+  .hero h1 .grad{background:linear-gradient(100deg,var(--red-bright) 10%,var(--red) 55%,var(--gold) 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .hero .sub{font-size:clamp(15px,2.1vw,18px);color:var(--muted);max-width:600px;margin:0 auto}
+  .hero .sub b{color:var(--text);font-weight:600}
+
+  .countdown{
+    margin:52px auto 0;display:inline-flex;align-items:baseline;gap:16px;
+    border:1px solid var(--line-2);border-radius:16px;padding:22px 34px;
+    background:rgba(229,72,77,.05);
+    box-shadow:0 20px 60px -20px rgba(0,0,0,.8), 0 0 40px -20px rgba(229,72,77,.35);
+  }
+  .countdown .days{font-family:var(--mono);font-size:clamp(40px,7vw,64px);font-weight:800;color:var(--red-bright);text-shadow:0 0 26px rgba(229,72,77,.4);line-height:1}
+  .countdown .lab{font-size:13px;letter-spacing:.2em;color:var(--muted);text-align:left;line-height:1.7}
+  .countdown .lab b{display:block;color:var(--text-strong);font-size:15px;letter-spacing:.05em}
+
+  .hero-stats{display:flex;justify-content:center;gap:clamp(20px,5vw,52px);margin-top:44px;flex-wrap:wrap}
+  .stat .num{font-family:var(--mono);font-size:clamp(20px,3.2vw,30px);font-weight:700;color:var(--gold)}
+  .stat .lab{font-size:12px;letter-spacing:.2em;color:var(--muted);margin-top:4px}
+
+  .toc{position:sticky;top:0;z-index:90;background:rgba(13,7,8,.84);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .toc-inner{max-width:var(--max);margin:0 auto;padding:10px 24px;display:flex;gap:8px;overflow-x:auto;scrollbar-width:none}
+  .toc-inner::-webkit-scrollbar{display:none}
+  .toc a{flex:none;font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--muted);text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:6px 14px;transition:all .25s}
+  .toc a:hover{color:var(--red-bright);border-color:var(--red-deep)}
+  .toc a.active{color:#140506;background:var(--red);border-color:var(--red);font-weight:700}
+
+  main{max-width:var(--max);margin:0 auto;padding:72px 24px 40px}
+  section{scroll-margin-top:72px;margin-bottom:64px}
+  .sec-head{display:flex;align-items:baseline;gap:18px;margin-bottom:14px}
+  .sec-no{font-family:var(--mono);font-size:clamp(42px,6.5vw,60px);font-weight:700;color:transparent;-webkit-text-stroke:1px var(--red-deep);line-height:1;user-select:none}
+  h2{font-size:clamp(22px,3.2vw,29px);font-weight:800;color:var(--text-strong);line-height:1.4}
+  h2 em{font-style:normal;color:var(--red-bright)}
+  .sec-sub{color:var(--muted);font-size:14px;margin-bottom:30px}
+  h3{font-size:18px;font-weight:700;color:var(--text-strong);margin:40px 0 14px;display:flex;align-items:center;gap:12px}
+  h3::before{content:"";width:18px;height:2px;background:var(--red);flex:none;box-shadow:0 0 8px rgba(229,72,77,.6)}
+  p{margin:0 0 20px}
+  b,strong{color:var(--text-strong);font-weight:650}
+
+  .note{
+    margin:26px 0;padding:16px 22px;border-left:3px solid var(--gold);
+    background:linear-gradient(90deg, rgba(240,179,94,.07), transparent 80%);
+    border-radius:0 10px 10px 0;font-size:15px;color:var(--text);
+  }
+  .note b{color:var(--gold)}
+
+  .timeline{margin:30px 0 8px;padding-left:6px}
+  .tl-item{position:relative;padding:0 0 28px 34px;border-left:1px solid var(--line-2)}
+  .tl-item:last-child{border-left-color:transparent;padding-bottom:4px}
+  .tl-item::before{content:"";position:absolute;left:-6px;top:8px;width:11px;height:11px;border-radius:50%;background:var(--bg);border:2px solid var(--red);box-shadow:0 0 12px rgba(229,72,77,.5)}
+  .tl-item.now::before{background:var(--red);animation:pulse 2s ease-in-out infinite}
+  .tl-time{font-family:var(--mono);font-size:12px;letter-spacing:.18em;color:var(--red-bright);margin-bottom:5px}
+  .tl-item h4{font-size:16px;color:var(--text-strong);font-weight:700;margin-bottom:6px}
+  .tl-item p{margin:0;font-size:15px}
+
+  .steps{counter-reset:step;margin:28px 0}
+  .step{display:flex;gap:16px;padding:16px 18px;margin-bottom:12px;border:1px solid var(--line);border-radius:12px;background:var(--card);transition:border-color .25s,transform .25s}
+  .step:hover{border-color:var(--red-deep);transform:translateX(4px)}
+  .step::before{
+    counter-increment:step;content:counter(step);
+    font-family:var(--mono);font-size:14px;font-weight:700;color:#140506;
+    background:var(--red);border-radius:8px;height:30px;min-width:30px;
+    display:flex;align-items:center;justify-content:center;margin-top:3px;flex:none;
+  }
+  .step b{display:block;color:var(--text-strong);font-size:15.5px;margin-bottom:3px}
+  .step span{font-size:14px;color:var(--muted)}
+
+  .check{list-style:none;margin:26px 0;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  @media(max-width:600px){.check{grid-template-columns:1fr}}
+  .check li{
+    display:flex;gap:12px;align-items:flex-start;
+    border:1px solid var(--line);border-radius:12px;background:var(--card);padding:14px 16px;font-size:14.5px;
+  }
+  .check li::before{
+    content:"";flex:none;width:18px;height:18px;margin-top:4px;border-radius:5px;
+    border:2px solid var(--red);box-shadow:0 0 8px rgba(229,72,77,.3) inset;
+  }
+  .check li b{display:block;color:var(--text-strong)}
+  .check li i{font-style:normal;color:var(--muted);font-size:13px}
+
+  .pit{border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:12px;padding:18px 22px 14px;margin:22px 0;background:var(--card)}
+  .pit .label{display:inline-block;font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.22em;color:#140C02;background:var(--gold);border-radius:5px;padding:3px 10px;margin-bottom:10px}
+  .pit h5{font-size:15.5px;color:var(--text-strong);font-weight:700;margin-bottom:5px}
+  .pit p{font-size:14.5px;margin-bottom:10px}
+  .pit p:last-child{margin-bottom:2px}
+
+  .ending{margin-top:56px;padding:32px 28px;border:1px solid var(--line);border-radius:16px;background:linear-gradient(160deg,var(--card-2),var(--card));text-align:center}
+  .ending p{margin-bottom:8px}
+  .ending .slogan{font-size:20px;font-weight:800;color:var(--text-strong);letter-spacing:.06em}
+  .ending .last{font-family:var(--mono);color:var(--red-bright);font-size:13px;letter-spacing:.1em;margin-top:14px}
+
+  footer.site{border-top:1px solid var(--line);margin-top:60px;padding:40px 24px 52px;text-align:center;background:linear-gradient(180deg,var(--bg),#0F0809)}
+  footer.site .f-mark{font-family:var(--mono);font-size:12px;letter-spacing:.3em;color:var(--red-bright);margin-bottom:16px}
+  footer.site p{color:var(--muted);font-size:13px;max-width:560px;margin:0 auto 8px;line-height:2}
+
+  #top{position:fixed;right:22px;bottom:26px;z-index:80;width:44px;height:44px;border-radius:12px;cursor:pointer;border:1px solid var(--red-deep);background:rgba(15,8,9,.85);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);color:var(--red-bright);font-family:var(--mono);font-size:16px;opacity:0;pointer-events:none;transition:all .3s}
+  #top.show{opacity:1;pointer-events:auto}
+  #top:hover{background:var(--red);color:#140506}
+
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+  @media(max-width:640px){body{font-size:16px}.hero{padding:72px 20px 90px}}
+</style>
+<link rel="canonical" href="https://jvkit.cn/gaokao/">
+<meta property="og:site_name" content="JVKIT">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:type" content="website">
+<meta property="og:title" content="2027 高考报名开启：全流程提醒与避坑清单">
+<meta property="og:description" content="2027 年高考报名陆续启动：报名时间轴、报名条件、五步流程、材料清单与避坑提醒，一页看懂。">
+<meta property="og:url" content="https://jvkit.cn/gaokao/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="2027 高考报名开启：全流程提醒与避坑清单">
+<meta name="twitter:description" content="2027 年高考报名陆续启动：报名时间轴、报名条件、五步流程、材料清单与避坑提醒，一页看懂。">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "2027 高考报名开启：全流程提醒与避坑清单", "description": "2027 年高考报名陆续启动：报名时间轴、报名条件、五步流程、材料清单与避坑提醒，一页看懂。", "url": "https://jvkit.cn/gaokao/", "inLanguage": "zh-CN"}</script>
+</head>
+<body>
+
+<div id="progress"></div>
+
+<header class="hero">
+  <div class="hero-inner">
+    <span class="kicker"><span class="dot"></span>GAOKAO 2027 · 报名季推送</span>
+    <h1>2027 高考报名<span class="grad">通道开启</span><br>这份全流程提醒请收好</h1>
+    <p class="sub">各省报名已陆续启动，窗口短、环节多、错过没有补考。<b>时间轴、条件、流程、材料、避坑</b>——一页讲清楚。</p>
+
+    <div class="countdown">
+      <span class="days" id="dday">--</span>
+      <span class="lab"><b>天</b>距离 2027 年高考（6 月 7 日）</span>
+    </div>
+
+    <div class="hero-stats">
+      <div class="stat"><div class="num">10–11 月</div><div class="lab">各省报名窗口</div></div>
+      <div class="stat"><div class="num">2 个阶段</div><div class="lab">网上填报 + 现场确认</div></div>
+      <div class="stat"><div class="num">1 次机会</div><div class="lab">逾期无法补报</div></div>
+    </div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="目录">
+  <div class="toc-inner">
+    <a href="#s1">01 全年时间轴</a>
+    <a href="#s2">02 报名条件</a>
+    <a href="#s3">03 五步流程</a>
+    <a href="#s4">04 材料清单</a>
+    <a href="#s5">05 避坑提醒</a>
+  </div>
+</nav>
+
+<main>
+
+  <section id="s1">
+    <div class="sec-head reveal"><span class="sec-no">01</span><h2>全年<em>时间轴</em>：现在你在哪一站</h2></div>
+    <p class="sec-sub reveal">报名只是起点，后面每个节点都环环相扣</p>
+
+    <p class="reveal">目前各省 2027 年高考报名正陆续启动，<b>窗口集中在 2026 年 10 月下旬至 11 月</b>，多数省份只开一到两周，<b>逾期无法补报</b>。把全年节点先存进脑子：</p>
+
+    <div class="timeline reveal">
+      <div class="tl-item now">
+        <div class="tl-time">2026.10 – 11 · 当下</div>
+        <h4>网上报名 + 缴费</h4>
+        <p>登录本省教育考试院官网注册填报、上传照片、网上缴费。部分省份艺术类/体育类报名同期进行，别漏选。</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">2026.11 – 12</div>
+        <h4>现场确认</h4>
+        <p>按通知到指定地点核验身份、采集照片/指纹、签字确认信息。网上填完≠报名成功，<b>确认这一步才算数</b>。</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">2027.03 – 04</div>
+        <h4>高考体检</h4>
+        <p>由学校或招办统一组织。体检结果直接影响部分专业报考资格，结果出来后自己留存一份。</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">2027.06 初</div>
+        <h4>打印准考证</h4>
+        <p>一般考前一周开放打印，多打两份，电子版存手机。</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">2027.06.07 – 08</div>
+        <h4>高考</h4>
+        <p>部分省份考试延续至 6 月 9–10 日。祝各位落笔生花。</p>
+      </div>
+    </div>
+
+    <div class="note reveal"><b>注意：</b>以上为全国通用节奏，<b>各省具体日期差异很大</b>（有的省 10 月中旬已开，有的 11 月下旬才截止），一切以你所在省教育考试院官方公告为准。</div>
+  </section>
+
+  <section id="s2">
+    <div class="sec-head reveal"><span class="sec-no">02</span><h2>报名<em>条件</em>：先自查再动手</h2></div>
+    <p class="sec-sub reveal">大部分人没问题，异地考生要格外留意</p>
+
+    <p class="reveal">基本条件三条：<b>遵守宪法和法律、高级中等教育学校毕业或具有同等学力、身体状况符合相关要求</b>。高校在校生、已被录取保留入学资格的、处于停考期的，不能报名。</p>
+
+    <p class="reveal">真正容易出问题的是<b>户籍与学籍</b>：</p>
+    <p class="reveal">· 应届生一般在学籍所在学校统一组织报名，跟着学校节奏走即可；<br>· 往届生、社会考生通常回<b>户籍所在地</b>招办报名；<br>· <b>随迁子女/异地考生</b>需满足流入地报考条件（学籍年限、父母社保或居住证明等），各省门槛不同，<b>现在就去核对，不要等报名系统开了才发现材料不齐</b>。</p>
+  </section>
+
+  <section id="s3">
+    <div class="sec-head reveal"><span class="sec-no">03</span><h2>报名<em>五步流程</em></h2></div>
+    <p class="sec-sub reveal">网上填报 + 现场确认，一步都不能少</p>
+
+    <div class="steps reveal">
+      <div class="step"><div><b>注册登录</b><span>进入本省教育考试院官网的高考报名系统，用手机号注册，记好账号密码——后面查分、填志愿都用它。</span></div></div>
+      <div class="step"><div><b>填写信息 + 上传照片</b><span>如实填写户籍、学籍、联系方式、报考科类（普通/艺术/体育）。照片严格按规格来：近期免冠、白底居多，尺寸和大小超限会被退回。</span></div></div>
+      <div class="step"><div><b>网上缴费</b><span>按提示缴纳报名考试费，缴费成功才算完成网上阶段。支付后记得刷新页面确认状态，别只看支付软件扣款。</span></div></div>
+      <div class="step"><div><b>现场确认</b><span>按招办通知的时间地点，带齐原件核验身份、采集信息、签字确认。信息一经确认原则上不得更改，签字前逐字核对姓名、身份证号、报考科类。</span></div></div>
+      <div class="step"><div><b>保存凭证</b><span>记下考生号/报名号，截图或拍照留存确认表。这是你后续一切环节的通行证。</span></div></div>
+    </div>
+  </section>
+
+  <section id="s4">
+    <div class="sec-head reveal"><span class="sec-no">04</span><h2>材料<em>清单</em>：照单准备</h2></div>
+    <p class="sec-sub reveal">提前一周备齐，别临阵翻箱倒柜</p>
+
+    <ul class="check reveal">
+      <li><div><b>身份证</b><i>核对有效期！临近过期或已过期，立刻去换领，可同步办临时身份证</i></div></li>
+      <li><div><b>户口簿</b><i>本人页与首页，异地报名常需整本复印</i></div></li>
+      <li><div><b>学籍/学历证明</b><i>应届生由学校统一出具；往届生带毕业证</i></div></li>
+      <li><div><b>证件照</b><i>按省考试院规格准备电子版，白底免冠居多</i></div></li>
+      <li><div><b>异地考生附加材料</b><i>居住证、父母社保缴纳证明、连续学籍证明等，以本省要求为准</i></div></li>
+      <li><div><b>加分/专项资格材料</b><i>如符合专项计划、加分政策，按通知同步申报</i></div></li>
+    </ul>
+  </section>
+
+  <section id="s5">
+    <div class="sec-head reveal"><span class="sec-no">05</span><h2>避坑<em>提醒</em>：每年都有人栽在这些地方</h2></div>
+    <p class="sec-sub reveal">五条血泪经验，条条真实</p>
+
+    <div class="pit reveal"><span class="label">坑 01</span><h5>身份证过期，报名现场被卡</h5><p>报名、体检、考试全程刷身份证。有效期到明年 6 月之前的，现在就去换证，制证需要时间。</p></div>
+    <div class="pit reveal"><span class="label">坑 02</span><h5>只完成网上填报，忘了现场确认</h5><p>网上填完不确认 = 没报上。确认时间地点看招办通知，错过不补。</p></div>
+    <div class="pit reveal"><span class="label">坑 03</span><h5>姓名、身份证号填错没核对</h5><p>生僻字、曾用名、身份证号一位之差，都会在大学录取时变成大麻烦。确认签字前逐字核对。</p></div>
+    <div class="pit reveal"><span class="label">坑 04</span><h5>联系电话写了个不常用的</h5><p>招办通知、成绩、录取全靠这个号码。填常用手机号，明年 9 月前别换号、别停机。</p></div>
+    <div class="pit reveal"><span class="label">坑 05</span><h5>信了「内部指标」「交钱保过」</h5><p>报名只走省教育考试院官方系统，不收取任何"加急费""保过费"。遇到收费电话、山寨网站，直接拉黑并核实。</p></div>
+
+    <div class="ending reveal">
+      <p class="slogan">把流程走稳，把仗打好。</p>
+      <p>报名顺利，六月见。</p>
+      <p class="last">2027 · 诸君，顶峰相见</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="f-mark">// GAOKAO 2027 REGISTRATION NOTICE</div>
+  <p>本页为个人站点整理的高考报名通用提醒，内容基于各省教育考试院公开通知的通行流程。</p>
+  <p>各省报名时间、条件与材料要求存在差异，请以本省教育考试院官方公告为最终依据。</p>
+</footer>
+
+<button id="top" aria-label="回到顶部">↑</button>
+
+<script>
+(function(){
+  var bar=document.getElementById('progress');
+  var top=document.getElementById('top');
+  var ticking=false;
+  window.addEventListener('scroll',function(){
+    if(ticking)return;ticking=true;
+    requestAnimationFrame(function(){
+      var h=document.documentElement,max=h.scrollHeight-h.clientHeight;
+      bar.style.transform='scaleX('+(max>0?h.scrollTop/max:0)+')';
+      top.classList.toggle('show',h.scrollTop>600);
+      ticking=false;
+    });
+  },{passive:true});
+  top.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});
+
+  var target=new Date('2027-06-07T09:00:00+08:00').getTime();
+  function tick(){
+    var d=Math.max(0,Math.ceil((target-Date.now())/86400000));
+    document.getElementById('dday').textContent=d;
+  }
+  tick();setInterval(tick,60000);
+
+  var links=document.querySelectorAll('.toc a'),map={};
+  links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a});
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(e.isIntersecting){
+        links.forEach(function(a){a.classList.remove('active')});
+        var a=map[e.target.id];if(a)a.classList.add('active');
+      }
+    });
+  },{rootMargin:'-30% 0px -60% 0px'});
+  document.querySelectorAll('main section').forEach(function(s){io.observe(s)});
+
+  var rio=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(e.isIntersecting){e.target.classList.add('in');rio.unobserve(e.target)}
+    });
+  },{threshold:.08});
+  document.querySelectorAll('.reveal').forEach(function(el){rio.observe(el)});
+})();
+</script>
+</body>
+</html>
